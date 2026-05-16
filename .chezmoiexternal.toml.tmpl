@@ -1,4 +1,4 @@
 [".host-secrets"]
 type = "git-repo"
-url = "{{ .hostSecretsRepo }}"
+url = "{{ .hostSecretsRepo | default "https://github.com/0x4D616E75/example-dotfiles-secrets.git" }}"
 refreshPeriod = "24h"
