@@ -1,0 +1,169 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "show_edit_predictions": false,
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "edit_predictions": {
+    "provider": "zed",
+    "disabled_globs": ["**/*.sops.*"],
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "base_keymap": "VSCode",
+  "theme": "Ayu Dark",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  // NOTE: Change the font family to your preference
+  // "buffer_font_family": "OperatorMonoLig Nerd Font",
+  // Vim mode settings
+  "vim_mode": false,
+  "vim": {
+    "use_system_clipboard": "always"
+  },
+  // use relative line numbers
+  "relative_line_numbers": "enabled",
+  "tab_bar": {
+    "show": true
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  // Only show error on tab
+  "tabs": {
+    "show_diagnostics": "errors"
+  },
+  // Indentation, rainbow indentation
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  // NOTE: Zen mode, refer https://github.com/zed-industries/zed/issues/4382 when it's resolved
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+  "agent": {
+    "dock": "left",
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o"
+    },
+    "button": true
+  },
+  "language_models": {
+    "openai": {
+      "available_models": []
+    }
+  },
+  // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
+  "inlay_hints": {
+    "enabled": true
+  },
+  // Use zed commit editor
+  "terminal": {
+    // "font_family": "FiraCode Nerd Font Mono",
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  },
+  // File syntax highlighting
+  "file_types": {
+    "Ansible": [
+      "**.ansible.yml",
+      "**.ansible.yaml",
+      "**/defaults/*.yml",
+      "**/defaults/*.yaml",
+      "**/meta/*.yml",
+      "**/meta/*.yaml",
+      "**/tasks/*.yml",
+      "**/tasks/*.yaml",
+      "**/handlers/*.yml",
+      "**/handlers/*.yaml",
+      "**/group_vars/*.yml",
+      "**/group_vars/*.yaml",
+      "**/playbooks/*.yaml",
+      "**/playbooks/*.yml",
+      "**playbook*.yaml",
+      "**playbook*.yml"
+    ],
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
+  // File scan exclusions, hide on the file explorer and search
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules"
+  ],
+  // Turn off telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // Move all panel to the right
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": true
+  },
+  "outline_panel": {
+    "button": true,
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  // Move some unnecessary panels to the left
+  "notification_panel": {
+    "button": false,
+    "dock": "left"
+  }
+}

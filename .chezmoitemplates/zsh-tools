@@ -1,0 +1,14 @@
+# thefuck
+if command -v thefuck >/dev/null 2>&1; then
+  eval "$(thefuck --alias)"
+fi
+
+# fnm
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd)"
+fi
+
+# cargo environment
+if [[ -e "$HOME/.cargo/env" ]] && [[ -z "$(command -v cargo)" ]]; then
+  source "$HOME/.cargo/env"
+fi

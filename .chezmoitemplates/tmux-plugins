@@ -1,0 +1,18 @@
+{{- /* Setup plugins with TPM if available */ -}}
+
+{{- $tpmPath := "" -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   if isExecutable "/opt/homebrew/opt/tpm/share/tpm/tpm" -}}
+{{-     $tpmPath = "/opt/homebrew/opt/tpm/share/tpm/tpm" -}}
+{{-   else if isExecutable "/usr/local/opt/tpm/share/tpm/tpm" -}}
+{{-     $tpmPath = "/usr/local/opt/tpm/share/tpm/tpm" -}}
+{{-   end -}}
+{{- end -}}
+{{- if ne $tpmPath "" }}
+
+# Enable powerline plugin
+set -g @plugin 'erikw/tmux-powerline'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '{{ $tpmPath }}'
+{{- end }}

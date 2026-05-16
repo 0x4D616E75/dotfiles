@@ -1,0 +1,21 @@
+# Login-shell environment and PATH bootstrap
+
+# Tool-specific bins first
+[[ -d "$HOME/.cargo/bin" ]] && path=("$HOME/.cargo/bin" $path)
+[[ -d "$HOME/.dotnet/tools" ]] && path=("$HOME/.dotnet/tools" $path)
+
+# Homebrew (Apple Silicon)
+[[ -d "/opt/homebrew/bin" ]] && path=("/opt/homebrew/bin" $path)
+[[ -d "/opt/homebrew/sbin" ]] && path=("/opt/homebrew/sbin" $path)
+
+# Homebrew (Intel)
+[[ -d "/usr/local/bin" ]] && path=("/usr/local/bin" $path)
+[[ -d "/usr/local/sbin" ]] && path=("/usr/local/sbin" $path)
+
+# Optional paths
+[[ -d "$HOME/.rd/bin" ]] && path=("$HOME/.rd/bin" $path)
+[[ -d "/usr/local/opt/ruby/bin" ]] && path=("/usr/local/opt/ruby/bin" $path)
+
+typeset -U path
+path=(${path/#\~/$HOME})
+export PATH
