@@ -7,20 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "tab_size": 2,
+  "gutter": {
+    "min_line_number_digits": 2
+  },
   "cli_default_open_behavior": "existing_window",
   "agent_servers": {
     "opencode": {
-      "type": "registry",
+      "type": "registry"
     },
     "codex-acp": {
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "show_edit_predictions": false,
   "git": {
     "inline_blame": {
-      "enabled": false,
-    },
+      "enabled": false
+    }
   },
   "edit_predictions": {
     "provider": "zed",
@@ -28,12 +32,12 @@
     "mode": "eager",
     "copilot": {
       "proxy": null,
-      "proxy_no_verify": null,
+      "proxy_no_verify": null
     },
-    "enabled_in_text_threads": false,
+    "enabled_in_text_threads": false
   },
   "git_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "base_keymap": "VSCode",
   "theme": "Ayu Dark",
@@ -44,57 +48,57 @@
   // Vim mode settings
   "vim_mode": false,
   "vim": {
-    "use_system_clipboard": "always",
+    "use_system_clipboard": "always"
   },
   // use relative line numbers
   "relative_line_numbers": "enabled",
   "tab_bar": {
-    "show": true,
+    "show": true
   },
   "scrollbar": {
-    "show": "never",
+    "show": "never"
   },
   // Only show error on tab
   "tabs": {
-    "show_diagnostics": "errors",
+    "show_diagnostics": "errors"
   },
   // Indentation, rainbow indentation
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware",
+    "coloring": "indent_aware"
   },
   // NOTE: Zen mode, refer https://github.com/zed-industries/zed/issues/4382 when it's resolved
   "centered_layout": {
     "left_padding": 0.15,
-    "right_padding": 0.15,
+    "right_padding": 0.15
   },
   "agent": {
     "dock": "left",
     "tool_permissions": {
-      "default": "allow",
+      "default": "allow"
     },
     "default_profile": "write",
     "default_model": {
       "provider": "openai",
-      "model": "gpt-4o",
+      "model": "gpt-4o"
     },
-    "button": true,
+    "button": true
   },
   "language_models": {
     "openai": {
-      "available_models": [],
-    },
+      "available_models": []
+    }
   },
   // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
   "inlay_hints": {
-    "enabled": true,
+    "enabled": true
   },
   // Use zed commit editor
   "terminal": {
     // "font_family": "FiraCode Nerd Font Mono",
     "env": {
-      "EDITOR": "zed --wait",
-    },
+      "EDITOR": "zed --wait"
+    }
   },
   // File syntax highlighting
   "file_types": {
@@ -114,10 +118,10 @@
       "**/playbooks/*.yaml",
       "**/playbooks/*.yml",
       "**playbook*.yaml",
-      "**playbook*.yml",
+      "**playbook*.yml"
     ],
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
-    "JSON": ["json", "jsonc", "*.code-snippets"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
   },
   // File scan exclusions, hide on the file explorer and search
   "file_scan_exclusions": [
@@ -141,30 +145,30 @@
     "**/.tap",
     "**/.nyc_output",
     "**/report",
-    "**/node_modules",
+    "**/node_modules"
   ],
   // Turn off telemetry
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   // Move all panel to the right
   "project_panel": {
     "button": true,
     "dock": "right",
-    "git_status": true,
+    "git_status": true
   },
   "outline_panel": {
     "button": true,
-    "dock": "right",
+    "dock": "right"
   },
   "collaboration_panel": {
     "button": false,
-    "dock": "right",
+    "dock": "right"
   },
   // Move some unnecessary panels to the left
   "notification_panel": {
     "button": false,
-    "dock": "left",
-  },
+    "dock": "left"
+  }
 }
