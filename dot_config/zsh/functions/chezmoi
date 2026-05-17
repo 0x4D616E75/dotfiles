@@ -1,0 +1,26 @@
+# chezmoi helpers
+
+if command -v chezmoi >/dev/null 2>&1; then
+  cm() {
+    chezmoi \
+      --source "$HOME/.local/share/chezmoi" \
+      --config "$HOME/.config/chezmoi/chezmoi.toml" \
+      --persistent-state "$HOME/.config/chezmoi/chezmoistate.boltdb" \
+      "$@"
+  }
+
+
+  alias cmcd='cd ~/.local/share/chezmoi'
+
+  if [ -d "$HOME/.local/share/chezmoi-secrets/.git" ]; then
+    cms() {
+      chezmoi \
+        --source "$HOME/.local/share/chezmoi-secrets" \
+        --config "$HOME/.config/chezmoi-secrets/chezmoi.toml" \
+        --persistent-state "$HOME/.config/chezmoi-secrets/chezmoistate.boltdb" \
+        "$@"
+    }
+
+  alias cmscd='cd ~/.local/share/chezmoi-secrets'
+  fi
+fi

@@ -1,0 +1,4 @@
+# Load custom shell functions
+for file in "$HOME"/.config/zsh/functions/*; do
+  [ -f "$file" ] && source "$file"
+done
